@@ -5,15 +5,16 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
+import CalendarMonthTwoToneIcon from '@mui/icons-material/CalendarMonthTwoTone';
+import SettingsTwoToneIcon from '@mui/icons-material/SettingsTwoTone';
+import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
 
 const drawerWidth = 240;
 
@@ -29,11 +30,11 @@ function ResponsiveDrawer(props) {
       <Toolbar />
       <Divider />
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+        {["Calendar", "Starred", "Send email", "Drafts"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon sx={{ color: "#fff" }}>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <CalendarMonthTwoToneIcon /> : <SettingsTwoToneIcon />}
               </ListItemIcon>
               <ListItemText sx={{ color: "#fff" }} primary={text} />
             </ListItemButton>
@@ -46,7 +47,7 @@ function ResponsiveDrawer(props) {
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon sx={{ color: "#fff" }}>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <CalendarMonthTwoToneIcon /> : <SettingsTwoToneIcon />}
               </ListItemIcon>
               <ListItemText sx={{ color: "#fff" }} primary={text} />
             </ListItemButton>
