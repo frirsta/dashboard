@@ -8,3 +8,4 @@
 
 * npm install @mui/material @emotion/react @emotion/styled
 * react
+* npm install react-router-dom localforage match-sorter sort-by
