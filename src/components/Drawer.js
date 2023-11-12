@@ -1,7 +1,6 @@
 import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
@@ -14,11 +13,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import CalendarMonthTwoToneIcon from '@mui/icons-material/CalendarMonthTwoTone';
 import SettingsTwoToneIcon from '@mui/icons-material/SettingsTwoTone';
-import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
+import TopNavbar from "./TopNavbar";
 
 const drawerWidth = 240;
 
-function ResponsiveDrawer(props) {
+function ResponsiveDrawer() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -59,7 +58,7 @@ function ResponsiveDrawer(props) {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <CssBaseline />
+     
       <AppBar
         position="fixed"
         sx={{
@@ -69,7 +68,7 @@ function ResponsiveDrawer(props) {
           boxShadow: "none",
         }}
       >
-        <Toolbar>
+        <Toolbar sx={{justifyContent: {xs: 'space-between', sm: 'flex-end'}}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -79,6 +78,7 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
+        <TopNavbar />
         </Toolbar>
       </AppBar>
       <Box
@@ -121,16 +121,7 @@ function ResponsiveDrawer(props) {
           {drawer}
         </Drawer>
       </Box>
-      <Box
-        component="main"
-        sx={{
-          flexGrow: 1,
-          p: 3,
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-        }}
-      >
-        <Toolbar />
-      </Box>
+
     </Box>
   );
 }

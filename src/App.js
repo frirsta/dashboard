@@ -1,10 +1,10 @@
-import styles from './styles/App.module.css';
-import Drawer from './components/Drawer';
+import styles from "./styles/App.module.css";
+import Drawer from "./components/Drawer";
 
 function App() {
   return (
     <div className={styles.App}>
-<Drawer />
+      <Drawer />
     </div>
   );
 }
